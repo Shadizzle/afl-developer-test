@@ -12,8 +12,18 @@
     flex-wrap: wrap
     justify-content: space-between
     align-items: flex-start
-    background-color: $red
+    background-color: $black
     padding: 10px 10px 0 10px
+    &[data-club="Sydney Swans"]
+      background-color: $red-sydney
+    &[data-club="Geelong"]
+      background-color: $blue-geelong
+    &[data-club="Carlton"]
+      background-color: $teal-carlton
+    &[data-club="Adelaide"]
+      background-color: $yellow-adelaide
+    &[data-club="North Melbourne"]
+      background-color: $blue-north-melbourne
 
   &-clubBadge
     margin: 10px

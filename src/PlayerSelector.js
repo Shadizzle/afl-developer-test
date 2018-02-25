@@ -4,9 +4,13 @@ import './PlayerSelector.css'
 
 class PlayerSelector extends Component {
   render() {
+    const {players} = this.props
+    const playerCards = players.map((player) =>
+      <PlayerCard player={player} />
+    )
     return (
       <div className="PlayerSelector">
-        <PlayerCard />
+        {playerCards}
       </div>
     )
   }

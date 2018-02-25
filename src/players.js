@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 const players = [
   {
     "firstname": "Lance",
@@ -163,3 +164,5 @@ const players = [
     ]
   }
 ]
+
+export default players
