@@ -11,8 +11,8 @@ class PlayerCard extends Component {
                src="/assets/Swans-rev.svg"
                alt="The club's badge" />
           <img className="PlayerCard-photo"
-               src="/assets/240399.png"
-               alt="A waist-up shot of player" />
+               src={player.imageUrl}
+               alt="A waist-up shot of the player" />
           <span className="PlayerCard-guernseyNumber">{player.jumperNumber}</span>
         </div>
         <div className="PlayerCard-description">
