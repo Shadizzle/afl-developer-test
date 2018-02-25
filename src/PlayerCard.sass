@@ -3,9 +3,9 @@
 
 .PlayerCard
   min-width: 288px
-  max-width: 736px
+  max-width: 608px
   min-height: 288px
-  margin: 16px
+  box-shadow: 2px 2px 4px $grey
 
   &-banner
     display: flex
@@ -13,7 +13,7 @@
     justify-content: space-between
     align-items: flex-start
     background-color: $black
-    padding: 10px 10px 0 10px
+    padding: 0 10px
     &[data-club="Sydney Swans"]
       background-color: $red-sydney
     &[data-club="Geelong"]
@@ -28,7 +28,7 @@
       position: relative
 
   &-clubBadge
-    margin: 10px
+    margin: 20px 10px
 
   &-guernseyNumber
     min-width: 32px
@@ -37,13 +37,13 @@
     text-align: center
     line-height: 1
     background-color: $white
-    margin: 10px
+    margin: 20px 10px
     padding: 6px 10px
     border-radius: 4px
     @include small-phone
       position: absolute
       left: 2%
-      top: 74%
+      top: 69%
 
   &-description
     background-color: $white
