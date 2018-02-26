@@ -1,4 +1,5 @@
 @import colors
+@import media
 
 .StatCard
   background-color: $white
@@ -8,10 +9,15 @@
   &-statCollection
     display: flex
     flex-flow: row wrap
+    @include in-width-range($tablet-min, $tablet-max)
+      justify-content: space-between
 
   &-statField
     width: 50%
     margin-bottom: 20px
+    @include in-width-range($tablet-min, $tablet-max)
+      width: auto
+      margin-bottom: 0
 
   &-statsTitle
     font-size: 14px

@@ -1,5 +1,15 @@
-$small-phone: "374px"
+$small-phone-max: "374px"
+$tablet-min: "600px"
+$tablet-max: "1024px"
 
-@mixin small-phone
-  @media only screen and (max-width : $small-phone)
+@mixin max-width($width)
+  @media only screen and (max-width : $width)
+    @content
+
+@mixin min-width($width)
+  @media only screen and (min-width : $width + 1)
+    @content
+
+@mixin in-width-range($min, $max)
+  @media only screen and (min-width : $min) and (max-width : $max)
     @content
