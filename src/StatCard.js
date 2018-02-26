@@ -3,13 +3,13 @@ import './StatCard.css'
 
 class StatCard extends Component {
   render() {
-    const { title, stats } = this.props
+    const { title, textColor, stats } = this.props
     const statFields = stats.map(([ name, value ], i) =>
       <div className="StatCard-statField" key={i}>
         <div className="StatCard-statName">
           {name}
         </div>
-        <div className="StatCard-statValue">
+        <div className="StatCard-statValue" data-text-color={textColor}>
           {value}
         </div>
       </div>
@@ -17,7 +17,9 @@ class StatCard extends Component {
 
     return (
       <div className="StatCard">
-        <h2 className="StatCard-statsTitle">{title}</h2>
+        <h2 className="StatCard-statsTitle" data-text-color={textColor}>
+          {title}
+        </h2>
         <div className="StatCard-statCollection">
           {statFields}
         </div>

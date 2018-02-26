@@ -14,7 +14,8 @@ class PlayerStats extends Component {
   render() {
     const {player} = this.props
     // NOTE: Using arrays of tuples (also arrays) instead of objects
-    // because it preserves order.
+    // because it reliably preserves order and destructures nicely for
+    // arbitrary keys.
     const totalStats = [
       [
         'disposals',
@@ -40,12 +41,13 @@ class PlayerStats extends Component {
       ['score', maxProperty(player.games, "score")]
     ]
     return (
-      <div className="PlayersStats">
-        <div className="PlayerStats-totalStats">
+      <div className="PlayerStats">
+        <div className="PlayerStats-StatCard">
           <StatCard title="Total" stats={totalStats} />
         </div>
-        <div className="PlayerStats-bestStats">
-          <StatCard title="Best of Season" stats={bestStats} />
+        <div className="PlayerStats-StatCard">
+          <StatCard title="Best of Season" textColor="red"
+                    stats={bestStats}/>
         </div>
       </div>
     )
