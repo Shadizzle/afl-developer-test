@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-//import { Link } from 'react-router-dom'
 import PlayerCard from './PlayerCard'
 import PlayerStats from './PlayerStats'
 import players from './players'
@@ -7,8 +6,7 @@ import './PlayerProfile.css'
 
 class PlayerProfile extends Component {
   render() {
-    const playerId = this.props.match.params.id
-    const player = players[playerId]
+    const player = this.props.player || players[this.props.match.params.id];
     return (
       <div className="PlayerProfile">
         <div className="PlayerProfile-PlayerCard">

@@ -4,6 +4,12 @@ import StatCard from './StatCard'
 
 it('renders without crashing', () => {
   const div = document.createElement('div')
-  ReactDOM.render(<StatCard />, div)
+  const testStats = [
+    ["notARealStat", 42]
+  ]
+  ReactDOM.render(
+      <StatCard title="Test" textColor="red" stats={testStats} />,
+    div
+  )
   ReactDOM.unmountComponentAtNode(div)
 })
