@@ -1,3 +1,16 @@
+@import media
+
 .PlayerStats
+  @include min-width($desktop-min)
+    display: flex
+    flex-flow: row nowrap
+
+  &-StatCard
+    @include min-width($desktop-min)
+      flex: 1
+
   &-StatCard:not(:last-child)
     margin-bottom: 16px
+    @include min-width($desktop-min)
+      margin-bottom: 0
+      margin-right: 16px

@@ -1,10 +1,20 @@
+@import media
+
 .PlayerProfile
   display: flex
   flex-flow: column nowrap
   padding: 8px
 
+  @include min-width($desktop-min)
+    flex-flow: row nowrap
+
   &-PlayerCard
     margin: 8px
+    @include min-width($desktop-min)
+      flex: 4
+    
 
   &-PlayerStats
     margin: 8px
+    @include min-width($desktop-min)
+      flex: 5
